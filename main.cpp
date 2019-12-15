@@ -30,6 +30,14 @@ void print__(){
     }
     cout << '\n';
 }
+
+void print(int *arr, int size){
+    for(int i = 0; i < size; ++i){
+        cout << &(arr[i]) << " ";
+    }
+    cout << '\n';
+}
+
 void print_arr_of_var(int **arr, short s){
     for(int i = 0; i < s; ++i){
         switch (arr[i][0]){
@@ -97,17 +105,11 @@ void arrays(){
 
     cout << "static one-dimensional array (";
     cout << &(static_one_dim_arr[0]) << ")" << endl;
-    for(int j = 0; j < size_arr; j++){
-        cout << &(static_one_dim_arr[j]) << " ";
-    }
-    cout << '\n';
+    print(&statiс_one_dim_arr[0]);
 
     cout << "dynamic one-dimensional array (";
     cout << (dynamic_one_dim_arr) << ")" << endl;
-    for(int j = 0; j < size_arr; j++){
-        cout << &(dynamic_one_dim_arr[j]) << " ";
-    }
-    cout << '\n';
+    print(dynamic_one_dim_arr);
 
     cout << "static two-dimensional array (";
     cout << &(static_two_dim_arr[0][0]) << ")" << endl;
