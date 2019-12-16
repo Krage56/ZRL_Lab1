@@ -59,7 +59,7 @@ void print_arr_of_var(int **arr, short s){
         i == s - 1 ? cout << "" : cout << ", ";
     }
     cout << '\n';
-     print__();
+    print__();
 }
 
 int** compare_var(int *a, int *b, int *c){
@@ -105,11 +105,11 @@ void arrays(){
 
     cout << "static one-dimensional array (";
     cout << &(static_one_dim_arr[0]) << ")" << endl;
-    print(&statiс_one_dim_arr[0]);
+    print(&static_one_dim_arr[0], size_arr);
 
     cout << "dynamic one-dimensional array (";
     cout << (dynamic_one_dim_arr) << ")" << endl;
-    print(dynamic_one_dim_arr);
+    print(dynamic_one_dim_arr, size_arr);
 
     cout << "static two-dimensional array (";
     cout << &(static_two_dim_arr[0][0]) << ")" << endl;
@@ -143,13 +143,13 @@ void structs(){
     cout << "With pushing: " << sizeof(South_West) << endl;
     cout << "Struct without #pragma: " << endl;
     cout << &(South_East.name) << ", " << &(South_East.count_inhabitants)
-                        << ", " << &(South_East.local_boss) << ", "<<
-                        &(South_East.middle_age) << endl;
+         << ", " << &(South_East.local_boss) << ", "<<
+         &(South_East.middle_age) << endl;
 
     cout << "Struct with #pragma: " << endl;
     cout << &(South_West.name) << ", " << &(South_West.count_inhabitants)
-                        << ", " << &(South_West.local_boss) << ", "<<
-                        &(South_West.middle_age) << endl;
+         << ", " << &(South_West.local_boss) << ", "<<
+         &(South_West.middle_age) << endl;
 
     print__();
 }
